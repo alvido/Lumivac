@@ -1114,12 +1114,12 @@ textarea {
   height: 18px;
   min-width: 90px;
   max-width: 90px;
-  background: url(/assets/images/icons/stars-empty.svg) repeat-x left;
+  background: url(../images/icons/stars-empty.svg) repeat-x left;
 }
 .rating__star .stars {
   display: block;
   height: 18px;
-  background: url(/assets/images/icons/stars.svg) repeat-x left;
+  background: url(../images/icons/stars.svg) repeat-x left;
 }
 .rating__star .stars.green {
   background: url(../images/icons/star-green.svg) repeat-x left;
