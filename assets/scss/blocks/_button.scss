@@ -36,6 +36,7 @@
 .icon {
     position: relative;
     @include reset-button;
+    @include flex-center;
     width: 24px;
     height: 24px;
 

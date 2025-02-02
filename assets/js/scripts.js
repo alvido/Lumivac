@@ -124,18 +124,18 @@ document.addEventListener("DOMContentLoaded", function () {
           if (slide.classList.contains("swiper-slide-active")) {
             video.play();
             playButton.style.display = "none";
-            pauseButton.style.display = "block";
+            pauseButton.style.display = "flex";
           } else {
             // Неактивные видео ставим на паузу
             video.pause();
             video.currentTime = 0;
-            playButton.style.display = "block";
+            playButton.style.display = "flex";
             pauseButton.style.display = "none";
           }
 
           // Событие, когда видео заканчивается
           video.addEventListener("ended", () => {
-            playButton.style.display = "block";
+            playButton.style.display = "flex";
             pauseButton.style.display = "none";
           });
         }
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (video) {
           video.play();
           playButton.style.display = "none";
-          pauseButton.style.display = "block";
+          pauseButton.style.display = "flex";
         }
       });
     });
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (video) {
           video.pause();
-          playButton.style.display = "block";
+          playButton.style.display = "flex";
           pauseButton.style.display = "none";
         }
       });
@@ -205,9 +205,9 @@ document.addEventListener("DOMContentLoaded", function () {
           // Обновляем видимость иконок
           if (video.muted) {
             soundOnIcon.style.display = "none";
-            soundOffIcon.style.display = "block";
+            soundOffIcon.style.display = "flex";
           } else {
-            soundOnIcon.style.display = "block";
+            soundOnIcon.style.display = "flex";
             soundOffIcon.style.display = "none";
           }
         }
@@ -226,12 +226,47 @@ document.addEventListener("DOMContentLoaded", function () {
           const playButton = slide.querySelector(".play");
           const pauseButton = slide.querySelector(".pause");
 
-          playButton.style.display = "block";
+          playButton.style.display = "flex";
           pauseButton.style.display = "none";
         });
       });
       handleVideoPlayback();
       updateSlideOpacity();
+    });
+  }
+
+  // Инициализация слайдера "customer"
+  if (document.querySelector("#customers")) {
+    new Swiper("#customers", {
+      observer: true,
+      observeParents: true,
+      loop: true,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: ".customers-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".customers-button-next",
+        prevEl: ".customers-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1, // Один полный слайд и куски по бокам
+          spaceBetween: 10, // Расстояние между слайдами
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
     });
   }
 

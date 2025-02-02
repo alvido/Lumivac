@@ -1,0 +1,117 @@
+.customer {
+    position: relative;
+    padding: 60px 0;
+    background: #F4F3ED;
+
+    @include mobile {
+        padding: 20px 0;
+    }
+
+    & .container {
+        position: relative;
+    }
+
+    & .swiper-slide {
+        border-radius: 20px;
+        background-color: var(--color-white);
+        overflow: hidden;
+
+        & .video {
+            max-width: 100%;
+            height: 300px;
+            position: relative;
+
+            & video {
+                height: 100%;
+                object-fit: cover;
+            }
+
+            & .play {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                translate: -50% -50%;
+                border: 5px solid var(--color-white);
+                border-radius: 50%;
+
+                @include hover {
+                    scale: 1.1;
+                }
+
+                & img {
+                    max-width: 30px;
+                }
+            }
+
+            & .pause {
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+
+                @include hover {
+                    scale: 1.1;
+                }
+
+                & img {
+                    max-width: 30px;
+                }
+            }
+        }
+
+        & .content {
+            padding: 40px 32px;
+
+            @include mobile {
+                padding: 20px;
+            }
+
+            & .rating__star {
+                max-width: none;
+                background: url(../images/icons/stars-reviews.svg) no-repeat left;
+            }
+
+            & h5 {
+                margin-block: 20px;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.1;
+            }
+
+            & .row {
+                margin-top: 70px;
+
+                @include mobile {
+                    margin-top: 30px;
+                }
+
+                & .author {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 1.1;
+                }
+            }
+        }
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev {
+        top: 50%;
+    }
+
+    & .swiper-button-prev {
+        left: 0px;
+
+        @include mobile {
+            left: 10px;
+        }
+    }
+    & .swiper-button-next {
+        right: 0px;
+
+        @include mobile {
+            right: 10px;
+        }
+    }
+}

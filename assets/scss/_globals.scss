@@ -46,7 +46,11 @@ h6 {
 
 h1 {
     @include fluid-text(42, 30);
-    font-weight: 400
+    font-weight: 400;
+
+    & span {
+        color: var(--color-accent);
+    }
 }
 
 h2 {
@@ -68,4 +72,9 @@ h4 {
 h5 {
     @include fluid-text(20, 18);
     font-weight: 500;
+}
+
+video{
+    display: block;
+    width: 100%;
 }
