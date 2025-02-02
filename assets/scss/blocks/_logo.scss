@@ -1,0 +1,10 @@
+.logo {
+
+    @include hover {
+        scale: 1.1;
+    }
+
+    & img {
+        max-height: 30px;
+    }
+}

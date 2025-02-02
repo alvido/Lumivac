@@ -1,0 +1,70 @@
+.burger {
+    @include reset-button;
+    @include squere(40px);
+    @include flex-center;
+    display: none;
+    position: relative;
+    z-index: 3;
+
+    @include tablet {
+        display: flex;
+    }
+
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(--color-white);
+
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        transition: all .3s ease;
+
+    }
+
+    &::before {
+        top: 13px;
+
+    }
+
+    &::after {
+        bottom: 13px;
+
+    }
+
+    & span {
+        font-size: 0;
+        width: 20px;
+        height: 2px;
+        background: var(--color-white);
+
+    }
+
+    &.burger--active {
+
+
+        &::before,
+        &::after {
+            top: 50%;
+            bottom: auto;
+            translate: -50% -50%;
+            background: var(--color-dark);
+        }
+
+        &::before {
+            rotate: 45deg;
+        }
+
+        &::after {
+            rotate: -45deg;
+        }
+
+        & span {
+            opacity: 0;
+        }
+    }
+}

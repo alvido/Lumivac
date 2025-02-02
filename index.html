@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pinplace</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__promo">
+                    <div class="marquee">
+                        <div class="promo">
+                            <span class="onsale">Special Offer</span>
+                            Black Friday Sale. 25% off entire website + free shipping*
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__inner">
+                    <button class="burger" id="burgerButton">
+                        <span>
+                            Menu
+                        </span>
+                    </button>
+                    <a href="index.html" class="header__logo logo">
+                        <img src="assets/images/logo.svg" alt="logo">
+                    </a>
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li>
+                                <a href="#product">LUMIVAC PRO</a>
+                            </li>
+                            <li>
+                                <a href="#about">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="#reviews">REVIEWS</a>
+                            </li>
+                            <li>
+                                <a href="#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#info">INFO</a>
+                            </li>
+                            <li>
+                                <a href="#contact">contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="action">
+                        <a class="cart__btn icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.0001 8C17.0001 9.32608 16.4733 10.5979 15.5356 11.5355C14.598 12.4732 13.3262 13 12.0001 13C10.674 13 9.40226 12.4732 8.46458 11.5355C7.5269 10.5979 7.00011 9.32608 7.00011 8C7.00011 6.67392 7.5269 5.40215 8.46458 4.46447C9.40226 3.52678 10.674 3 12.0001 3C13.3262 3 14.598 3.52678 15.5356 4.46447C16.4733 5.40215 17.0001 6.67392 17.0001 8ZM15.5001 8C15.5001 8.45963 15.4096 8.91475 15.2337 9.33939C15.0578 9.76403 14.8 10.1499 14.475 10.4749C14.15 10.7999 13.7641 11.0577 13.3395 11.2336C12.9149 11.4095 12.4597 11.5 12.0001 11.5C11.5405 11.5 11.0854 11.4095 10.6607 11.2336C10.2361 11.0577 9.85024 10.7999 9.52524 10.4749C9.20023 10.1499 8.94242 9.76403 8.76653 9.33939C8.59064 8.91475 8.50011 8.45963 8.50011 8C8.50011 7.07174 8.86886 6.1815 9.52524 5.52513C10.1816 4.86875 11.0719 4.5 12.0001 4.5C12.9284 4.5 13.8186 4.86875 14.475 5.52513C15.1314 6.1815 15.5001 7.07174 15.5001 8ZM12.0001 14C7.48511 14 3.73811 17.247 3.01811 21.506C2.88011 22.323 3.57211 23 4.41011 23H19.5881C20.4271 23 21.1201 22.323 20.9811 21.506C20.2621 17.246 16.5151 14 12.0001 14ZM4.86911 21.5C4.83216 21.5006 4.79557 21.4927 4.76214 21.4769C4.72871 21.4612 4.69934 21.438 4.67626 21.4091C4.65319 21.3803 4.63703 21.3465 4.62903 21.3104C4.62103 21.2743 4.6214 21.2369 4.63011 21.201C5.44511 17.928 8.43711 15.5 12.0001 15.5C15.5631 15.5 18.5551 17.928 19.3701 21.201C19.3788 21.2369 19.3792 21.2743 19.3712 21.3104C19.3632 21.3465 19.347 21.3803 19.324 21.4091C19.3009 21.438 19.2715 21.4612 19.2381 21.4769C19.2047 21.4927 19.1681 21.5006 19.1311 21.5H4.86911Z"
+                                    fill="#B2B2B2" />
+                            </svg>
+                        </a>
+                        <a class="cart__btn icon">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8 5.02344C8 3.22844 9.684 1.52344 12 1.52344C14.316 1.52344 16 3.22844 16 5.02344H8ZM6.5 5.02344C6.5 2.26244 9 0.0234375 12 0.0234375C15 0.0234375 17.5 2.26244 17.5 5.02344H20C20.5304 5.02344 21.0391 5.23415 21.4142 5.60922C21.7893 5.9843 22 6.493 22 7.02344V21.0234C22 21.5539 21.7893 22.0626 21.4142 22.4377C21.0391 22.8127 20.5304 23.0234 20 23.0234H4C3.46957 23.0234 2.96086 22.8127 2.58579 22.4377C2.21071 22.0626 2 21.5539 2 21.0234V7.02344C2 6.493 2.21071 5.9843 2.58579 5.60922C2.96086 5.23415 3.46957 5.02344 4 5.02344H6.5ZM17.5 6.52344H20C20.1326 6.52344 20.2598 6.57612 20.3536 6.66988C20.4473 6.76365 20.5 6.89083 20.5 7.02344V21.0234C20.5 21.156 20.4473 21.2832 20.3536 21.377C20.2598 21.4708 20.1326 21.5234 20 21.5234H4C3.86739 21.5234 3.74021 21.4708 3.64645 21.377C3.55268 21.2832 3.5 21.156 3.5 21.0234V7.02344C3.5 6.89083 3.55268 6.76365 3.64645 6.66988C3.74021 6.57612 3.86739 6.52344 4 6.52344H17.5Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                            <span>0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="mobile__nav nav">
+        <button class="icon close" id="closeMenu">
+            Close
+        </button>
+        <ul class="nav__list">
+            <li>
+                <a href="#product">LUMIVAC PRO</a>
+            </li>
+            <li>
+                <a href="#about">ABOUT US</a>
+            </li>
+            <li>
+                <a href="#reviews">REVIEWS</a>
+            </li>
+            <li>
+                <a href="#faq">FAQ</a>
+            </li>
+            <li>
+                <a href="#info">INFO</a>
+            </li>
+            <li>
+                <a href="#contact">contact us</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+
+        <!-- <section class="about">
+            <div class="container">
+                <div class="reviews">
+                    <h2>Hear from our happy travelers</h2>
+
+                    <div class="reviews__wrap">
+                        <div class="reviews__stats">
+                            <h3>Excellent</h3>
+                            <div class="reviews__summary">
+                                <div class="reviews__rating">
+                                    <div class="mark">
+                                        <span class="filled" style="width: 100%;"></span>
+                                    </div>
+                                    <div class="mark">
+                                        <span class="filled" style="width: 100%;"></span>
+                                    </div>
+                                    <div class="mark">
+                                        <span class="filled" style="width: 100%;"></span>
+                                    </div>
+                                    <div class="mark">
+                                        <span class="filled" style="width: 100%;"></span>
+                                    </div>
+                                    <div class="mark">
+                                        <span class="filled" style="width: 40%;"></span>
+                                    </div>
+                                </div>
+                                <span class="count">4.4</span>
+                            </div>
+                            <span class="total">Total 931 Reviews</span>
+                            <a href="#"><img class="" src="assets/images/product.png" alt=""></a>
+                            <ul class="reviews__grade">
+                                <li>
+                                    <b>Excellent</b>
+                                    <span class="bar">
+                                        <span class="progress excellent" style="width: 67%;">
+
+                                        </span>
+                                    </span>
+                                    <span class="percent">67%</span>
+                                </li>
+                                <li>
+                                    <b>Great</b>
+                                    <span class="bar">
+                                        <span class="progress excellent" style="width: 20%;"></span>
+                                    </span>
+                                    <span class="percent">20%</span>
+                                </li>
+                                <li>
+                                    <b>Good</b>
+                                    <span class="bar">
+                                        <span class="progress good" style="width: 3%;"></span>
+                                    </span>
+                                    <span class="percent">3%</span>
+                                </li>
+                                <li>
+                                    <b>Average</b>
+                                    <span class="bar">
+                                        <span class="progress good" style="width: 7%;"></span>
+                                    </span>
+                                    <span class="percent">7%</span>
+                                </li>
+                                <li><b>Bad</b>
+                                    <span class="bar">
+                                        <span class="progress bad" style="width: 3%;"></span>
+                                    </span>
+                                    <span class="percent">3%</span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="reviews__content">
+                            <div class="filters">
+                                <button class="button button--white">
+                                    FILTER
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.57943 2.67021H3.28643C3.39743 3.02321 3.61243 3.32721 3.90943 3.55021C4.21943 3.78321 4.58643 3.90621 4.97343 3.90621C5.36143 3.90621 5.72943 3.78321 6.03843 3.55121C6.33543 3.32721 6.55043 3.02321 6.66143 2.67021H12.2914C12.4289 2.66426 12.5588 2.60545 12.654 2.50605C12.7492 2.40665 12.8023 2.27434 12.8023 2.13671C12.8023 1.99909 12.7492 1.86678 12.654 1.76738C12.5588 1.66798 12.4289 1.60917 12.2914 1.60321H6.66143C6.55143 1.25168 6.33344 0.943765 6.03843 0.723214C5.73202 0.490954 5.35792 0.36555 4.97343 0.366214C4.58643 0.366214 4.21843 0.489214 3.90943 0.721214C3.61447 0.941813 3.39649 1.24971 3.28643 1.60121H2.58043C2.4388 1.60121 2.30298 1.65747 2.20283 1.75762C2.10269 1.85776 2.04643 1.99359 2.04643 2.13521C2.04643 2.27684 2.10269 2.41266 2.20283 2.51281C2.30298 2.61295 2.4388 2.66921 2.58043 2.66921L2.57943 2.67021ZM4.27143 2.13621C4.27156 2.04389 4.28987 1.9525 4.32533 1.86726C4.36078 1.78202 4.41267 1.7046 4.47804 1.63941C4.54341 1.57422 4.62099 1.52255 4.70633 1.48734C4.79167 1.45214 4.88311 1.43408 4.97543 1.43421C5.06775 1.43434 5.15914 1.45266 5.24438 1.48811C5.32962 1.52356 5.40705 1.57545 5.47223 1.64082C5.53742 1.7062 5.58909 1.78377 5.6243 1.86911C5.65951 1.95445 5.67756 2.04589 5.67743 2.13821C5.67716 2.32466 5.60284 2.50337 5.47082 2.63502C5.33879 2.76667 5.15988 2.84048 4.97343 2.84021C4.78698 2.83995 4.60828 2.76563 4.47663 2.6336C4.34498 2.50158 4.27116 2.32266 4.27143 2.13621ZM13.3944 5.83421H12.7634C12.6534 5.48218 12.435 5.17388 12.1394 4.95321C11.8331 4.72181 11.4594 4.59712 11.0754 4.59821C10.6884 4.59821 10.3204 4.72121 10.0114 4.95321C9.71647 5.17381 9.49849 5.48171 9.38843 5.83321H1.47443C1.3328 5.83321 1.19698 5.88947 1.09683 5.98962C0.99669 6.08976 0.94043 6.22559 0.94043 6.36721C0.94043 6.50884 0.99669 6.64466 1.09683 6.74481C1.19698 6.84495 1.3328 6.90121 1.47443 6.90121H9.38843C9.49943 7.25421 9.71443 7.55821 10.0114 7.78121C10.3214 8.01421 10.6884 8.13621 11.0754 8.13621C11.4634 8.13621 11.8314 8.01421 12.1404 7.78121C12.4374 7.55821 12.6514 7.25421 12.7634 6.90121H13.3934C13.5309 6.89526 13.6608 6.83645 13.756 6.73705C13.8512 6.63765 13.9043 6.50534 13.9043 6.36771C13.9043 6.23009 13.8512 6.09778 13.756 5.99838C13.6608 5.89898 13.5309 5.84017 13.3934 5.83421H13.3944ZM11.7774 6.36721C11.7809 6.4617 11.7653 6.55592 11.7316 6.64424C11.6978 6.73255 11.6466 6.81315 11.5809 6.88121C11.5153 6.94927 11.4366 7.00339 11.3496 7.04034C11.2626 7.07728 11.169 7.09629 11.0744 7.09622C10.9799 7.09615 10.8863 7.07701 10.7993 7.03994C10.7123 7.00288 10.6337 6.94865 10.5682 6.88049C10.5026 6.81234 10.4515 6.73167 10.4179 6.6433C10.3843 6.55494 10.3688 6.46069 10.3724 6.36621C10.3794 6.18449 10.4566 6.01254 10.5876 5.88649C10.7187 5.76044 10.8936 5.69009 11.0754 5.69022C11.2573 5.69035 11.432 5.76095 11.5629 5.88719C11.6938 6.01342 11.7707 6.18548 11.7774 6.36721ZM12.2914 10.0652H8.92643C8.81662 9.71332 8.59861 9.40503 8.30343 9.18421C7.99708 8.95281 7.62336 8.82812 7.23943 8.82921C6.85243 8.82921 6.48443 8.95221 6.17543 9.18421C5.88047 9.40481 5.66249 9.71272 5.55243 10.0642H2.57943C2.4378 10.0642 2.30198 10.1205 2.20183 10.2206C2.10169 10.3208 2.04543 10.4566 2.04543 10.5982C2.04543 10.7398 2.10169 10.8757 2.20183 10.9758C2.30198 11.076 2.4378 11.1322 2.57943 11.1322H5.55143C5.66143 11.4852 5.87743 11.7892 6.17443 12.0122C6.48343 12.2452 6.85143 12.3672 7.23843 12.3672C7.62543 12.3672 7.99343 12.2442 8.30243 12.0122C8.60043 11.7892 8.81443 11.4852 8.92643 11.1322H12.2924C12.4299 11.1263 12.5598 11.0674 12.655 10.9681C12.7502 10.8687 12.8033 10.7363 12.8033 10.5987C12.8033 10.4611 12.7502 10.3288 12.655 10.2294C12.5598 10.13 12.4299 10.0712 12.2924 10.0652H12.2914ZM7.94143 10.5982C7.94116 10.7848 7.86679 10.9636 7.73467 11.0954C7.60255 11.2271 7.42351 11.301 7.23693 11.3007C7.05035 11.3004 6.87152 11.2261 6.73977 11.094C6.60803 10.9618 6.53416 10.7828 6.53443 10.5962C6.53456 10.5039 6.55287 10.4125 6.58833 10.3273C6.62378 10.242 6.67567 10.1646 6.74104 10.0994C6.80641 10.0342 6.88399 9.98255 6.96933 9.94734C7.05467 9.91214 7.14611 9.89408 7.23843 9.89421C7.33075 9.89435 7.42214 9.91266 7.50738 9.94811C7.59262 9.98356 7.67005 10.0355 7.73523 10.1008C7.80042 10.1662 7.85209 10.2438 7.8873 10.3291C7.92251 10.4145 7.94156 10.5059 7.94143 10.5982Z"
+                                            fill="black"></path>
+                                    </svg>
+                                </button>
+                                <div class="filters">
+                                    Sort by
+                                    <button class="button button--white">
+                                        Most relevant first
+                                        <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.00776 7.18388C7.87867 7.18505 7.7537 7.22941 7.65276 7.30988L4.42276 9.80688L1.19676 7.30988C1.09581 7.22941 0.970841 7.18505 0.841757 7.18388C0.596757 7.18388 0.369757 7.35187 0.248757 7.62087C0.160611 7.82207 0.136521 8.04552 0.179757 8.26087C0.223757 8.48387 0.332757 8.67088 0.486757 8.79088L4.06976 11.5599C4.17576 11.6419 4.29976 11.6859 4.42376 11.6859C4.55284 11.6847 4.67781 11.6403 4.77876 11.5599L8.36276 8.78988C8.52509 8.65611 8.63374 8.46829 8.66876 8.26087C8.71186 8.04551 8.68778 7.8221 8.59976 7.62087C8.47976 7.35087 8.25176 7.18388 8.00776 7.18388ZM0.840757 4.54988C0.969497 4.54847 1.09408 4.50413 1.19476 4.42387L4.42476 1.92787L7.65276 4.42287C7.75976 4.50588 7.88276 4.54887 8.00776 4.54887C8.25176 4.54887 8.47876 4.38188 8.59976 4.11188C8.68824 3.91079 8.71268 3.68734 8.66976 3.47187C8.63448 3.26432 8.52546 3.07648 8.36276 2.94288L4.77976 0.172875C4.67878 0.0924792 4.55383 0.048131 4.42476 0.046875C4.29567 0.0480543 4.1707 0.092411 4.06976 0.172875L0.485757 2.94388C0.322774 3.07767 0.213724 3.26593 0.178757 3.47388C0.135757 3.69088 0.160757 3.91887 0.248757 4.11387C0.368757 4.38387 0.595757 4.54988 0.840757 4.54988Z"
+                                                fill="black"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <ul class="reviews__list">
+                                <li class="review__card">
+                                    <div class="reviews__product">
+                                        <a href="#" class="reviews__link">
+                                            <img src="assets/images/product.png" alt="">
+                                            <h5>
+                                                Double Hair Growth
+                                                Set - Mineral Shampoo, Conditioner, Hair Mask
+                                                &amp; Growth Spray
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <div class="reviews__info">
+                                        <span class="author">Jennifer A. Germany</span>
+                                        <span class="date">3 August 2023</span>
+                                        <div class="rating">
+                                            <div class="rating__star">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                            </div>
+                                            <span>Excellent</span>
+                                        </div>
+                                        <h4>Super!</h4>
+                                        <p class="review__text">
+                                            It seems to work pretty good for my hair. It feels much softer and
+                                            fluffier
+                                            and no longer frizzy. It's been the best hair care I've ever had,
+                                            because
+                                            not even the really expensive products have managed that. The hair feels
+                                            thicker and fuller and has grown well within a short time. My pixie cut
+                                            is
+                                            history. The hair at the back is already reaching my shoulders after
+                                            just 2
+                                            weeks! I will definitely continue to use it!
+                                        </p>
+                                    </div>
+
+
+                                </li>
+
+                                <li class="review__card">
+                                    <div class="reviews__product">
+                                        <a href="#" class="reviews__link">
+                                            <img src="assets/images/product.png" alt="">
+                                            <h5>
+                                                Double Hair Growth
+                                                Set - Mineral Shampoo, Conditioner, Hair Mask
+                                                &amp; Growth Spray
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <div class="reviews__info">
+                                        <span class="author">Amanda R. Germany</span>
+                                        <span class="date">19 March 2024</span>
+                                        <div class="rating">
+                                            <div class="rating__star">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                            </div>
+                                            <span>Excellent</span>
+                                        </div>
+                                        <h4>PERFECT!</h4>
+                                        <p class="review__text">
+                                            As described - would buy again
+                                        </p>
+                                        <div class="reviews__images">
+                                            <a href="#"><img src="assets/images/product.png" alt=""></a>
+                                            <a href="#"><img src="assets/images/product.png" alt=""></a>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="review__card">
+                                    <div class="reviews__product">
+                                        <a href="#" class="reviews__link">
+                                            <img src="assets/images/product.png" alt="">
+                                            <h5>
+                                                Double Hair Growth
+                                                Set - Mineral Shampoo, Conditioner, Hair Mask
+                                                &amp; Growth Spray
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <div class="reviews__info">
+                                        <span class="author">Elizabeth M. United States</span>
+                                        <span class="date">26 August 2023</span>
+                                        <div class="rating">
+                                            <div class="rating__star">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                                        fill="#146F60"></path>
+                                                </svg>
+                                            </div>
+                                            <span>Excellent</span>
+                                        </div>
+                                        <h4>Help</h4>
+                                        <p class="review__text">
+                                            My wife is absolutely thrilled with this hair care product. Can only
+                                            recommend.
+                                        </p>
+                                        <div class="reviews__images">
+                                            <a href="#"><img src="assets/images/product.png" alt=""></a>
+                                            <a href="#"><img src="assets/images/product.png" alt=""></a>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                            </ul>
+
+
+                            <div class="pagination">
+                                <ul class="pagination__list">
+                                    <li>
+                                        <a class="prev page-numbers" href="#">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li><a class="page-numbers" href="#">1</a></li>
+                                    <li><a class="page-numbers" href="#">2</a></li>
+                                    <li><span aria-current="page" class="page-numbers current">3</span></li>
+                                    <li><a class="page-numbers" href="#">4</a></li>
+                                    <li><a class="page-numbers" href="#">5</a></li>
+                                    <li><a class="page-numbers" href="#">6</a></li>
+                                    <li><a class="page-numbers" href="#">7</a></li>
+                                    <li><a class="page-numbers" href="#">8</a></li>
+                                    <li><a class="page-numbers" href="#">9</a></li>
+                                    <li><a class="page-numbers" href="#">10</a></li>
+                                    <li>
+                                        <a class="next page-numbers" href="#">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="single">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="col">
+                        <div class="swiper swipper-gallery">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/images/product.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/hero/hero.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <span><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div thumbsSlider="" class="swiper swiper-thumb">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/images/product.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/hero/hero.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h1>World map coloured</h1>
+                        <div class="rating">
+                            <div class="rating__star">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                        fill="#146F60"></path>
+                                </svg>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                        fill="#146F60"></path>
+                                </svg>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                        fill="#146F60"></path>
+                                </svg>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                        fill="#146F60"></path>
+                                </svg>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z"
+                                        fill="#146F60"></path>
+                                </svg>
+                            </div>
+                            <p>Excellente 4.8 <span>|</span> <b>7,320 trusted reviews</b></p>
+                        </div>
+                        <div class="product__price">
+                            <span class="price">615 Eur</span>
+                            <span class="price-old"><s>655 Eur</s></span>
+                            <span class="onsale">-30%</span>
+                        </div>
+                        <p>
+                            Celebrate your journey around the world with our beautifully crafted pin travel maps.
+                            Whether
+                            you’re an avid globetrotter or dreaming of future destinations, our maps offer a perfect way
+                            to
+                            showcase your adventures and inspire new ones. Whether you’re a seasoned adventurer or
+                            dreaming
+                            of future destinations, our maps offer a perfect way to showcase your travels and inspire
+                            new
+                            ones.
+                        </p>
+
+                        <ul class="regular">
+                            <li>Loved by over 10,000 travelers!</li>
+                            <li>Perfect gift idea.</li>
+                            <li>Lifetime warranty assured.</li>
+                        </ul>
+
+                        <div class="size-selector">
+                            <div class="top">
+                                <span class="title">Map size:</span>
+                                <span class="title"><img src="assets/images/icons/Frame.svg" alt="">Size guide</span>
+                            </div>
+                            <div class="bottom">
+                                <label class="size-option active">
+                                    <input type="radio" name="map-size" value="medium" checked>
+                                    <img src="assets/images/icons/size/medium.svg" alt="Medium Size">
+                                    <h3>Medium – 159 €</h3>
+                                    <p>100cm x 70cm</p>
+                                </label>
+
+                                <label class="size-option">
+                                    <input type="radio" name="map-size" value="large">
+                                    <img src="assets/images/icons/size/large.svg" alt="Large Size">
+                                    <h3>Large – 229 €</h3>
+                                    <p>120cm x 80cm</p>
+                                </label>
+
+                                <label class="size-option">
+                                    <input type="radio" name="map-size" value="xlarge">
+                                    <img src="assets/images/icons/size/xlarge.svg" alt="XLarge Size">
+                                    <h3>XLarge – 299 €</h3>
+                                    <p>150cm x 100cm</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="color-selector">
+                            <div class="color-label">
+                                <b>Pin colour:</b> <span id="selected-color-name">Gold</span>
+                                <div id="selected-color-circle" class="color-option"
+                                    style="background-color: var(--color-gold);"></div>
+                            </div>
+                            <p>1 box - 100 pins</p>
+                            <div class="color-actions">
+                                <div class="color-options">
+                                    <div class="color-option active" style="background-color: var(--color-gold);"
+                                        data-color="Gold"></div>
+                                    <div class="color-option" style="background-color: var(--color-broun);"
+                                        data-color="Brown"></div>
+                                    <div class="color-option" style="background-color: var(--color-gray-dark);"
+                                        data-color="Dark Gray"></div>
+                                    <div class="color-option" style="background-color: var(--color-gray);"
+                                        data-color="Gray"></div>
+                                    <div class="color-option" style="background-color: var(--color-white);"
+                                        data-color="White"></div>
+                                    <div class="color-option" style="background-color: var(--color-black);"
+                                        data-color="Black"></div>
+                                    <div class="color-option" style="background-color: var(--color-yellow);"
+                                        data-color="Yellow"></div>
+                                    <div class="color-option" style="background-color: var(--color-red);"
+                                        data-color="Red">
+                                    </div>
+                                    <div class="color-option" style="background-color: var(--color-pink);"
+                                        data-color="Pink"></div>
+                                    <div class="color-option" style="background-color: var(--color-purple);"
+                                        data-color="Purple"></div>
+                                    <div class="color-option" style="background-color: var(--color-blue-light);"
+                                        data-color="Light Blue"></div>
+
+                                    <div class="color-option active" style="background-color: gold;" data-color="Gold">
+                                    </div>
+                                    <div class="color-option" style="background-color: brown;" data-color="Brown"></div>
+                                    <div class="color-option" style="background-color: yellow;" data-color="Yellow">
+                                    </div>
+                                    <div class="color-option" style="background-color: red;" data-color="Red"></div>
+                                    <div class="color-option" style="background-color: pink;" data-color="Pink"></div>
+                                    <div class="color-option" style="background-color: purple;" data-color="Purple">
+                                    </div>
+                                    <div class="color-option" style="background-color: blue;" data-color="Blue"></div>
+                                </div>
+                                <div class="icon" id="color-palette">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personalization-selector">
+                            <div class="top">
+                                <button class="title" id="personalizationButton">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_37_331)">
+                                            <path d="M6 0.54541V11.4545" stroke="#464545" stroke-linecap="square"
+                                                stroke-linejoin="round" />
+                                            <path d="M0.545898 6H11.455" stroke="#464545" stroke-linecap="square"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_37_331">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Personalization <span>+20 €</span>
+                                </button>
+                                <button class="icon" id="personalizationClose">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.85742 2.14355L2.14353 9.85745" stroke="#464545"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                        <path d="M2.14258 2.14355L9.85647 9.85745" stroke="#464545"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="personalization-style">
+                                <p class="title">Style:</p>
+                                <div class="slider">
+                                    <div class="swiper" id="personalization">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <label class="personalization-option" for="img1">
+                                                    <input type="radio" name="image" id="img1" value="img1" checked />
+                                                    <img src="assets/images/personalization/img1.png" alt="Image 1" />
+                                                </label>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <label class="personalization-option" for="img2">
+                                                    <input type="radio" name="image" id="img2" value="img2" />
+                                                    <img src="assets/images/personalization/img2.png" alt="Image 2" />
+                                                </label>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <label class="personalization-option" for="img3">
+                                                    <input type="radio" name="image" id="img3" value="img3" />
+                                                    <img src="assets/images/personalization/img3.png" alt="Image 3" />
+                                                </label>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <label class="personalization-option" for="img4">
+                                                    <input type="radio" name="image" id="img4" value="img4" />
+                                                    <img src="assets/images/personalization/img1.png" alt="Image 4" />
+                                                </label>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <label class="personalization-option" for="img5">
+                                                    <input type="radio" name="image" id="img5" value="img5" />
+                                                    <img src="assets/images/personalization/img2.png" alt="Image 5" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-buttons">
+                                        <div class="swiper-button-next personalization-button-next"></div>
+                                        <div class="swiper-button-prev personalization-button-prev"></div>
+                                    </div>
+                                </div>
+                                <label class="title" for="name-input">Name (or names):</label>
+                                <p class="instructions">
+                                    You can enter a name, multiple names, or quotes. <br>
+                                    Minimum 3 characters, maximum 300 characters.
+                                </p>
+                                <input type="text" id="name-input" placeholder="Enter text" minlength="3"
+                                    maxlength="300">
+
+                            </div>
+
+                            <button class="button">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.40473 6.75C2.21568 6.74981 2.03421 6.82434 1.89987 6.95736C1.76553 7.09039 1.68921 7.27111 1.68754 7.46016C1.68678 7.52568 1.69627 7.59092 1.71567 7.65352L3.53325 14.0625C3.61749 14.3619 3.79752 14.6254 4.04579 14.8127C4.29405 15 4.59686 15.1008 4.90786 15.0996H13.0922C13.4038 15.0999 13.7071 14.9989 13.9563 14.8118C14.2055 14.6248 14.3871 14.3618 14.4739 14.0625L16.2914 7.65352L16.3125 7.46016C16.3109 7.27111 16.2346 7.09039 16.1002 6.95736C15.9659 6.82434 15.7844 6.74981 15.5954 6.75H2.40473Z"
+                                        stroke="white" stroke-width="1.5" />
+                                    <path d="M5.625 6.75L9 2.25L12.375 6.75" stroke="white" stroke-width="1.5" />
+                                </svg>
+                                ADD TO CART
+                            </button>
+
+                            <ul class="payment__list">
+                                <li>
+                                    <img src="assets/images/icons/payment/applepay.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/payment/klarna.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/payment/amex.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/payment/gpay.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/payment/visa.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/payment/mastercard.svg" alt="">
+                                </li>
+
+                            </ul>
+
+                            <ul class="desc__list">
+                                <li><img src="assets/images/icons/time.svg" alt="">Delivery in 3-6 business days</li>
+                                <li><img src="assets/images/icons/shipping.svg" alt="">Free shipping</li>
+                                <li><img src="assets/images/icons/guard.svg" alt="">Guaranted safe checkout</li>
+                                <li><img src="assets/images/icons/calendar.svg" alt="">30 Days free return</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <ul class="faq__list">
+                    <li class="faq__item">
+                        <div class="faq__question">What size are the maps?</div>
+                        <div class="faq__answer">
+                            We offer free shipping to European countries. For other continents, please check the
+                            shipping price in your cart.
+                        </div>
+                    </li>
+                    <li class="faq__item active">
+                        <div class="faq__question">How much does shipping cost?</div>
+                        <div class="faq__answer">
+                            The main difference between our two cradle bouncers is in how you use it. Our Moonboon
+                            Original can be turned on and off, and adjusted, using the TIMER and TEMPO knobs on the
+                            front of the motor. 
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">How many pins are included with the map?</div>
+                        <div class="faq__answer">
+                            We offer free shipping to European countries. For other continents, please check the
+                            shipping price in your cart.
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">How is the map made?</div>
+                        <div class="faq__answer">
+                            We offer free shipping to European countries. For other continents, please check the
+                            shipping price in your cart.
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">How do I hang the map?</div>
+                        <div class="faq__answer">
+                            When using our Motor Connect, you can easily turn it on and off and adjust it on your phone
+                            in the Moonboon App. 
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">How long does shipping take?</div>
+                        <div class="faq__answer">
+                            In addition, the Motor Connect also has multiple sleep programs available to you in the app
+                            that automatically speed up and slow down the pace of the rocking to match your child's
+                            sleep rhythm and were designed by sleep experts.  
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">Can I customize the map?</div>
+                        <div class="faq__answer">
+                            We offer free shipping to European countries. For other continents, please check the
+                            shipping price in your cart.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <img src="assets/images/icons/trace.svg" alt="delivery">
+                    <span>Free Shipping</span>
+                </div>
+                <div class="row">
+                    <img src="assets/images/icons/years.svg" alt="WARRANTY">
+                    <span>2 YEARS WARRANTY</span>
+                </div>
+                <div class="row">
+                    <img src="assets/images/icons/secure-big.svg" alt="secure">
+                    <span>Secure checkout</span>
+                </div>
+            </div>
+            <div class="footer__middle">
+                <div class="col">
+                    <a href="index.html" class="footer__logo logo">
+                        <img src="assets/images/logo.svg" alt="logo">
+                    </a>
+                    <p class="small-text">
+                        Symbol designates a registered trademark of LUMIVAC, in the United States and elsewhere.
+                    </p>
+                </div>
+                <div class="col">
+                    <h5>Get Early Access to New Products Below</h5>
+                    <div class="subscribe__form">
+                        <form action="#" class="news__form">
+                            <input type="email" required placeholder="Enter your email">
+                            <button class="button">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                    <p>
+                        By clicking "Join Now" you agree to receive promotional emails from LUMIVAC®. You may
+                        unsubscribe at any time.
+                    </p>
+                    <div class="social">
+                        <a href="#">
+                            <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.0794 13.2615L21.7322 8.99523H17.6426V6.22659C17.6143 5.90854 17.6579 5.5882 17.7699 5.28921C17.882 4.99022 18.0597 4.7202 18.2901 4.49907C18.5204 4.27795 18.7975 4.11135 19.1008 4.01158C19.4041 3.9118 19.726 3.88139 20.0426 3.92259H21.9031V0.289953C20.8106 0.114785 19.707 0.0185358 18.6007 0.00195312C15.2272 0.00195312 13.024 2.04579 13.024 5.74467V8.99619H9.28003V13.2615H13.024V23.5748C14.5504 23.8128 16.1056 23.8128 17.632 23.5748V13.2615H21.0784H21.0794Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.2985 12.1237C27.2985 13.6062 27.3161 15.0868 27.2921 16.5683C27.3057 17.7097 27.0641 18.8397 26.585 19.8757C26.1725 20.7544 25.5427 21.5132 24.7551 22.0805C23.9675 22.6478 23.0481 23.0048 22.0841 23.1176C21.1056 23.2588 20.1179 23.3299 19.1302 23.328C16.7154 23.3456 14.3016 23.328 11.8877 23.2902C10.5861 23.3235 9.29637 23.0343 8.13359 22.4483C7.39153 22.0503 6.74577 21.4944 6.2418 20.8197C5.73782 20.1451 5.3879 19.3682 5.21667 18.5437C4.98458 17.4012 4.88607 16.2355 4.92313 15.0702C4.9139 12.7034 4.92959 10.3348 4.95636 7.96803C4.94099 6.92194 5.11293 5.88154 5.46405 4.89603C5.79911 3.93322 6.39049 3.08006 7.1745 2.42845C7.95851 1.77685 8.90544 1.35148 9.91329 1.19818C10.9968 1.01744 12.0936 0.929125 13.1921 0.934181C15.5588 0.904642 17.9274 0.934181 20.2942 0.96095C21.3591 0.945444 22.4179 1.12405 23.4188 1.48803C24.3472 1.81904 25.1717 2.3895 25.8088 3.14163C26.4458 3.89376 26.8728 4.80087 27.0465 5.7711C27.2269 6.80776 27.3226 7.85738 27.3327 8.90957C27.3797 9.97941 27.3437 11.052 27.3437 12.1237H27.2985ZM25.3047 12.1394H25.2641C25.2641 11.1139 25.2871 10.0883 25.2576 9.06372C25.2512 8.17889 25.1896 7.29532 25.073 6.41818C24.9715 5.60382 24.6016 4.84646 24.0217 4.26575C23.4419 3.68503 22.685 3.31406 21.8708 3.21141C21.0153 3.08169 20.1515 3.01351 19.2862 3.00741C17.1792 2.98108 15.072 2.98108 12.965 3.00741C12.1816 3.01357 11.4016 3.06741 10.625 3.16895C9.73552 3.24306 8.90087 3.62915 8.26848 4.259C7.63609 4.88886 7.24666 5.72195 7.16898 6.6111C7.06497 7.38685 7.0104 8.16843 7.00559 8.9511C6.98347 11.0674 6.98347 13.1838 7.00559 15.3C7.01052 16.0933 7.06559 16.8825 7.17082 17.6677C7.248 18.5522 7.63516 19.3809 8.26395 20.0077C8.89274 20.6345 9.72274 21.0189 10.6074 21.0933C11.4868 21.1991 12.3699 21.2529 13.2567 21.2548C15.1865 21.2776 17.1164 21.2776 19.0462 21.2548C19.9592 21.2517 20.8711 21.1922 21.7767 21.0766C22.4025 21.0128 23.0012 20.7885 23.515 20.4254C24.0287 20.0624 24.4401 19.5729 24.7093 19.0043C25.0159 18.3727 25.1815 17.682 25.1948 16.98C25.2401 15.3637 25.2668 13.752 25.3028 12.1394H25.3047ZM16.1413 6.3471C17.2848 6.34802 18.4024 6.68792 19.3527 7.32384C20.3031 7.95977 21.0436 8.86317 21.4807 9.91986C21.9177 10.9766 22.0317 12.1391 21.8082 13.2606C21.5847 14.382 21.0337 15.412 20.2249 16.2204C19.4162 17.0288 18.3859 17.5793 17.2643 17.8022C16.1428 18.0252 14.9803 17.9107 13.9238 17.4731C12.8673 17.0356 11.9643 16.2946 11.3288 15.3439C10.6933 14.3933 10.354 13.2755 10.3536 12.132C10.3616 10.5998 10.974 9.13257 12.0578 8.04934C13.1415 6.96611 14.609 6.35438 16.1413 6.3471ZM19.8336 12.1413C19.8373 11.1572 19.4499 10.212 18.7567 9.51362C18.0634 8.8152 17.1212 8.42078 16.1371 8.4171C15.1531 8.41343 14.2079 8.80082 13.5095 9.49404C12.8111 10.1873 12.4167 11.1295 12.413 12.1136C12.4096 13.0978 12.7973 14.0432 13.4908 14.7416C14.1844 15.44 15.127 15.8343 16.1113 15.8377C17.0956 15.8411 18.0409 15.4534 18.7393 14.7599C19.4377 14.0663 19.832 13.1237 19.8354 12.1394L19.8336 12.1413ZM23.4336 6.14126C23.4381 5.82752 23.3336 5.52193 23.1379 5.27666C22.9422 5.03138 22.6675 4.86162 22.3606 4.79634C22.0537 4.73106 21.7336 4.77431 21.455 4.91871C21.1765 5.0631 20.9566 5.2997 20.8331 5.58812C20.7095 5.87654 20.6899 6.1989 20.7775 6.50019C20.8651 6.80148 21.0546 7.06302 21.3136 7.24018C21.5725 7.41734 21.885 7.49914 22.1975 7.47162C22.5101 7.44409 22.8034 7.30895 23.0274 7.08926C23.2831 6.84003 23.4308 6.49849 23.4373 6.13941L23.4336 6.14126Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.378 3.23523H25.3992L18.7982 10.7799L26.5636 21.0452H20.484L15.7224 14.8195L10.2734 21.0452H7.2494L14.3102 12.9763L6.8606 3.23523H13.0948L17.3995 8.92515L22.378 3.23523ZM21.3172 19.2365H22.9915L12.1857 4.94883H10.3886L21.3172 19.2365Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="31" height="24" viewBox="0 0 31 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M29.07 11.974C29.084 14.1588 28.8952 16.3402 28.506 18.49C28.3516 19.0637 28.0492 19.5867 27.629 20.0067C27.2089 20.4267 26.6857 20.7289 26.112 20.883C24.001 21.449 15.535 21.449 15.535 21.449C15.535 21.449 7.07 21.449 4.959 20.883C4.38527 20.7289 3.86211 20.4267 3.44195 20.0067C3.02179 19.5867 2.71937 19.0637 2.565 18.49C1.81053 14.1788 1.81053 9.76926 2.565 5.45802C2.71937 4.88436 3.02179 4.36133 3.44195 3.94134C3.86211 3.52136 4.38527 3.21916 4.959 3.06502C7.069 2.49902 15.535 2.49902 15.535 2.49902C15.535 2.49902 24 2.49902 26.112 3.06502C26.6857 3.21916 27.2089 3.52136 27.629 3.94134C28.0492 4.36133 28.3516 4.88436 28.506 5.45802C28.896 7.60802 29.084 9.78902 29.07 11.974ZM12.83 16.035L19.864 11.975L12.83 7.91502V16.035Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.64 1.5C10.993 1.5 8 5.288 8 9.41C8 11.336 9.021 13.715 10.657 14.479C10.905 14.597 11.045 14.543 11.099 14.307C11.142 14.124 11.369 13.231 11.465 12.823C11.4847 12.7581 11.4871 12.6892 11.472 12.6231C11.4569 12.557 11.4249 12.4959 11.379 12.446C10.7514 11.5786 10.4128 10.5356 10.411 9.465C10.4088 8.69954 10.5619 7.94159 10.861 7.23699C11.1601 6.53238 11.599 5.89577 12.1511 5.36565C12.7033 4.83553 13.3573 4.42293 14.0735 4.15279C14.7897 3.88265 15.5533 3.76059 16.318 3.794C17.0343 3.75094 17.7518 3.85776 18.4245 4.10766C19.0972 4.35755 19.7104 4.74502 20.2249 5.2453C20.7394 5.74558 21.1438 6.34768 21.4125 7.01313C21.6811 7.67858 21.808 8.39274 21.785 9.11C21.785 12.64 19.998 15.093 17.675 15.093C17.3778 15.108 17.0812 15.053 16.8091 14.9324C16.5371 14.8118 16.2972 14.629 16.1087 14.3987C15.9202 14.1684 15.7885 13.897 15.7241 13.6065C15.6597 13.316 15.6645 13.0144 15.738 12.726C16.2254 11.3074 16.5891 9.8493 16.825 8.368C16.8533 8.13503 16.8314 7.8987 16.7607 7.67491C16.69 7.45113 16.5722 7.24508 16.4152 7.07065C16.2582 6.89621 16.0656 6.75744 15.8505 6.66366C15.6354 6.56989 15.4027 6.52329 15.168 6.527C13.856 6.527 12.8 7.883 12.8 9.702C12.7933 10.3675 12.9251 11.0271 13.187 11.639C13.187 11.639 11.896 17.117 11.659 18.139C11.4575 19.3815 11.4434 20.6473 11.617 21.894L11.592 21.883L11.609 21.923C11.9 22.03 12.191 22.138 12.491 22.223C13.1819 21.1572 13.7277 20.004 14.114 18.794L14.932 15.684C15.2629 16.1672 15.7107 16.5587 16.2336 16.8222C16.7566 17.0857 17.3378 17.2126 17.923 17.191C21.863 17.191 24.703 13.564 24.703 9.055C24.7 4.729 21.172 1.5 16.64 1.5Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.864 5.44898C19.8076 5.37403 18.8115 4.92893 18.051 4.19198C17.2904 3.45503 16.8142 2.47346 16.706 1.41998L16.606 0.500977H11.688V1.52498L11.658 16.025C11.6643 16.3254 11.6106 16.6241 11.5 16.9036C11.3894 17.183 11.2241 17.4375 11.0138 17.6523C10.8036 17.867 10.5526 18.0376 10.2755 18.154C9.9985 18.2705 9.701 18.3305 9.40048 18.3305C9.09996 18.3305 8.80246 18.2705 8.52542 18.154C8.24838 18.0376 7.99738 17.867 7.78712 17.6523C7.57687 17.4375 7.41159 17.183 7.30098 16.9036C7.19037 16.6241 7.13666 16.3254 7.14298 16.025V15.986C7.14298 15.979 7.14898 15.973 7.14898 15.967C7.15365 15.6137 7.24232 15.2666 7.40766 14.9543C7.57299 14.6421 7.81026 14.3736 8.09984 14.1712C8.38943 13.9687 8.72302 13.8381 9.07307 13.7901C9.42312 13.7421 9.77957 13.778 10.113 13.895V8.72098C9.85631 8.67409 9.5959 8.65066 9.33498 8.65098C7.88445 8.65098 6.4665 9.08111 5.26043 9.88698C4.05436 10.6928 3.11434 11.8383 2.55925 13.1784C2.00415 14.5185 1.85892 15.9931 2.1419 17.4158C2.42488 18.8384 3.12338 20.1452 4.14906 21.1709C5.17474 22.1966 6.48153 22.8951 7.90419 23.1781C9.32684 23.461 10.8015 23.3158 12.1416 22.7607C13.4817 22.2056 14.6271 21.2656 15.433 20.0595C16.2388 18.8535 16.669 17.4355 16.669 15.985V9.90298C17.732 10.898 20.132 11.145 21.817 10.869V5.52098L20.864 5.44898Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.6905 18.8328C21.6905 18.8328 21.5731 20.5555 20.0069 20.5555C18.7974 20.5555 17.9714 19.633 17.198 18.4351C19.3949 16.5175 20.7899 13.6539 20.7899 10.4539C20.79 4.6804 16.2498 0 10.6493 0C5.04871 0 0.508545 4.6804 0.508545 10.454C0.508545 16.2276 5.04871 20.908 10.6493 20.908C11.6657 20.908 12.6468 20.7531 13.5726 20.4663C14.7438 22.327 16.2306 24 18.5583 24C23.2958 24 23.4916 18.8328 23.4916 18.8328H21.6905V18.8328ZM10.6493 19.1852C7.38405 19.1852 4.73709 15.2761 4.73709 10.454C4.73709 5.63188 7.38405 1.72276 10.6493 1.72276C13.9145 1.72276 16.5614 5.63188 16.5614 10.454C16.5614 12.3715 16.1425 14.1442 15.433 15.5846C14.6315 14.4403 13.6693 13.4658 12.2937 13.1556C9.85341 12.6053 7.75191 13.7037 7.08629 14.2519L7.71274 15.5439C7.71274 15.5439 8.34603 15.1798 9.91632 15.5435C10.9057 15.7726 11.6746 17.1457 12.5558 18.721C11.9577 19.0218 11.3164 19.1852 10.6493 19.1852Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.16667 0.333374L2 4.50004V19.5H7V23.6667L11.1667 19.5H14.5L22 12V0.333374H6.16667ZM20.3333 11.1667L17 14.5H13.6667L10.75 17.4167V14.5H7V2.00004H20.3333V11.1667Z"
+                                    fill="#8D8B8B" />
+                                <path
+                                    d="M16.1667 4.91663H17.8334V9.91663H16.1667V4.91663ZM11.5834 4.91663H13.25V9.91663H11.5834V4.91663Z"
+                                    fill="#8D8B8B" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <nav class="footer__nav">
+                        <ul class="footer__nav--list">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Shipping and delivery</a></li>
+                            <li><a href="#">Reviews</a></li>
+                            <li><a href="#">General Terms & Conditions</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                        </ul>
+                    </nav>
+                    <h5>Accepted Payment Methods</h5>
+                    <ul class="payment__list">
+                        <li>
+                            <img src="assets/images/icons/payment/visa.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/images/icons/payment/mc.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/images/icons/payment/amex.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/images/icons/payment/dot.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/images/icons/payment/jcb.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/images/icons/payment/cart.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/images/icons/payment/pp.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="copy">Copyright © 2024, Lumivac. All Rights Reserved</p>
+                <nav class="policy">
+                    <ul class="policy__list">
+                        <li><a href="#">Warranty & Return</a></li>
+                        <li><a href="#">Terms of Use and Sale</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

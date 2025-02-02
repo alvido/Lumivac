@@ -1,0 +1,103 @@
+.header {
+    position: relative;
+
+    &.fixed {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 20;
+    }
+
+    &__top {
+        background: var(--color-accent);
+    }
+
+    &__promo {
+        height: 42px;
+        @include flex-center;
+
+        & .marquee {
+
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+
+            & .promo {
+                @include flex-center;
+                gap: 12px;
+                font-size: 14px;
+
+                @include phone {
+                    animation: marquee 10s linear infinite;
+                }
+            }
+        }
+
+    }
+
+    &__bottom {
+        background: var(--color-dark);
+    }
+
+    &__inner {
+        padding-block: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(2.5rem, -11.882rem + 22.47vw, 7.5rem);
+        color: var(--color-white);
+
+        @include phone {
+            gap: 12px;
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    & a {
+        font-size: 14px;
+        line-height: 1;
+
+        @include hover {
+            color: var(--color-accent);
+        }
+    }
+
+}
+
+.onsale {
+    margin-left: 16px;
+    padding-inline: 0 10px;
+    position: relative;
+    z-index: 2;
+    height: 30px;
+    @include flex-center;
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    background: var(--gr-dark);
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        width: 16px;
+        height: 100%;
+        background: url(../images/icons/subtract.svg) no-repeat left/cover
+    }
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include tablet {
+        gap: 15px;
+    }
+}
