@@ -59,6 +59,10 @@
     background: var(--color-white);
     transition-duration: var(--transition-duration);
 
+    @include mobile {
+        width: 100%;
+    }
+
     &.nav--active {
         display: flex;
         left: 0;

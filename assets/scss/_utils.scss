@@ -41,6 +41,11 @@ section {
     gap: 12px;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .site {
     min-height: 100vh;
     display: flex;

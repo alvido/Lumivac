@@ -1,5 +1,5 @@
 .product {
-    padding: 25px 0;
+    padding: 50px 0;
     color: var(--color-white);
     background: var(--color-black);
     background-size: cover;
@@ -58,14 +58,25 @@
         &.top {
             gap: 0;
 
+            @include tablet {
+                align-items: flex-start;
+                max-width: none;
+                text-align: left;
+            }
+
+            @include phone {
+                align-items: center;
+                text-align: center;
+            }
+
             & .subtitle {
+                text-align: left;
                 font-size: 20px;
                 text-transform: uppercase;
             }
 
             & h1 {
                 margin-block: 6px 20px;
-                font-size: 28px;
                 line-height: 1.4;
                 text-transform: uppercase;
 
@@ -76,8 +87,25 @@
                 & span {
                     color: var(--color-accent);
                 }
+            }
 
-                & .rating__star .stars {
+            & .button {
+                margin: 100px 0 30px;
+
+                @include tablet {
+                    order: 1;
+                    margin: 24px 0 0 0;
+                }
+            }
+
+            & .rating {
+                @include tablet {
+                    margin-top: 48px;
+                }
+            }
+
+            & .rating__star {
+                & .stars {
                     background: url(../images/icons/star-accent.svg) repeat-x left;
                 }
             }

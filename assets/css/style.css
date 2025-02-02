@@ -332,6 +332,16 @@ section {
   gap: 12px;
 }
 
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .site {
   min-height: 100vh;
   display: -webkit-box;
@@ -410,7 +420,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(30px, 3.0434782609vw, 42px);
+  font-size: clamp(46px, 3.4782608696vw, 48px);
   font-weight: 400;
 }
 h1 span {
@@ -481,7 +491,7 @@ video {
           align-items: center;
   gap: 8px;
   height: var(--button-height);
-  padding: 0 40px;
+  padding: 0 32px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
@@ -1210,6 +1220,11 @@ textarea {
   background: var(--color-white);
   -webkit-transition-duration: var(--transition-duration);
           transition-duration: var(--transition-duration);
+}
+@media (max-width: 767px) {
+  .mobile__nav {
+    width: 100%;
+  }
 }
 .mobile__nav.nav--active {
   display: -webkit-box;
@@ -2143,7 +2158,7 @@ textarea {
 }
 
 .product {
-  padding: 25px 0;
+  padding: 50px 0;
   color: var(--color-white);
   background: var(--color-black);
   background-size: cover;
@@ -2219,13 +2234,30 @@ textarea {
 .product__desc.top {
   gap: 0;
 }
+@media (max-width: 1023px) {
+  .product__desc.top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: none;
+    text-align: left;
+  }
+}
+@media (max-width: 560px) {
+  .product__desc.top {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
 .product__desc.top .subtitle {
+  text-align: left;
   font-size: 20px;
   text-transform: uppercase;
 }
 .product__desc.top h1 {
   margin-block: 6px 20px;
-  font-size: 28px;
   line-height: 1.4;
   text-transform: uppercase;
 }
@@ -2237,7 +2269,23 @@ textarea {
 .product__desc.top h1 span {
   color: var(--color-accent);
 }
-.product__desc.top h1 .rating__star .stars {
+.product__desc.top .button {
+  margin: 100px 0 30px;
+}
+@media (max-width: 1023px) {
+  .product__desc.top .button {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 24px 0 0 0;
+  }
+}
+@media (max-width: 1023px) {
+  .product__desc.top .rating {
+    margin-top: 48px;
+  }
+}
+.product__desc.top .rating__star .stars {
   background: url(../images/icons/star-accent.svg) repeat-x left;
 }
 @media (max-width: 1023px) {
