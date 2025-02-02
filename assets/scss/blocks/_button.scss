@@ -1,21 +1,35 @@
 .button {
+    position: relative;
     @include reset-button;
+    @include flex-center;
+    gap: 8px;
     height: var(--button-height);
 
     padding: 0 40px;
     font-size: 18px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
     text-align: center;
     text-transform: capitalize;
 
-    border-radius: var(--border-radius-large);
-
     color: var(--color-white);
     background: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius-large);
 
     @include hover {
-        background: var(--color-dark);
+        color: var(--color-accent);
+        background: var(--color-white);
+    }
+
+    &--outline {
+        color: var(--color-black);
+        background: var(--color-white);
+
+        @include hover {
+            color: var(--color-white);
+            background: var(--color-accent);
+        }
     }
 }
 
@@ -46,6 +60,7 @@
 
 .close {
     font-size: 0;
+
     &::before,
     &::after {
         content: '';

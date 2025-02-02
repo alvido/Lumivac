@@ -1,0 +1,240 @@
+.reviews {
+    padding: 60px 0;
+
+    @include tablet {
+        background: #F4F3ED;
+        padding: 30px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__stats {
+        width: 410px;
+        background: var(--color-white-alt);
+        padding: 28px 24px;
+        border-radius: 20px;
+
+        @include tablet {
+            width: 100%;
+            background: var(--color-white);
+        }
+
+        & h4 {
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__img {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        & img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+        }
+    }
+
+    &__grade {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+
+        & li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            & b {
+                width: 70px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.25px;
+            }
+
+            & .percent {
+                text-align: right;
+                width: 30px;
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            & .bar {
+                position: relative;
+                margin-right: auto;
+                flex: 1;
+                height: 8px;
+                background: #1010101A;
+                border-radius: 5px;
+
+                & .progress {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    border-radius: 5px;
+                    background: var(--gr-accent);
+                }
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    &__list {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include tablet {
+            margin-top: 20px;
+        }
+
+        &>li {
+            position: relative;
+            padding: 30px;
+            background: var(--color-white-alt);
+            border-radius: 20px;
+
+            @include tablet {
+                background: var(--color-white);
+            }
+
+            @include mobile {
+                padding: 20px;
+            }
+
+            & .verified {
+                max-width: 140px;
+            }
+
+            & .row {
+                justify-content: space-between;
+            }
+
+            & .author {
+                max-width: 100px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+
+            & .rating {
+                margin-top: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & h4 {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        & .date {
+            font-size: 10px;
+            line-height: 1.1;
+            letter-spacing: 0.25px;
+            color: var(--color-gray);
+        }
+
+        & p {
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
+
+/* Filter and sort buttons */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+
+    @include phone {
+        font-size: 10px;
+        gap: 7px;
+    }
+
+    & .button {
+        padding: 0 24px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.25px;
+
+        @include phone {
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.1;
+            height: 33px;
+            padding: 0 13px;
+        }
+    }
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+
+    &__list {
+        @include flex-center;
+        gap: 15px;
+
+        @include phone {
+            gap: 10px;
+        }
+    }
+
+    & .page-numbers {
+        @include flex-center;
+        min-width: 16px;
+        line-height: 1;
+
+        &.prev {
+            & svg {
+                rotate: 180deg;
+            }
+        }
+
+        &.current {
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        @include hover {
+            color: var(--color-accent);
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.explore {
+    position: relative;
+    padding: 80px 0;
+
+    @include tablet {
+        padding: 60px 0;
+    }
+
+    & .reels {
+        margin-top: 70px;
+
+        @include tablet {
+            margin-top: 25px;
+        }
+    }
+
+    & .swiper-slide {
+        @include flex-center;
+        position: relative;
+        overflow: hidden;
+
+        &.swiper-slide-active {
+            & .buttons {
+                .icon {
+                    display: flex;
+                }
+            }
+        }
+
+
+        & img,
+        & video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        & .buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+
+            & .icon {
+                width: 32px;
+                height: 32px;
+                @include flex-center;
+                display: none;
+                color: var(--color-white);
+                background: #00000099;
+                border-radius: 50%;
+                transition: all .3s ease;
+
+                @include hover {
+                    scale: 1.1;
+                }
+
+                & img {
+                    width: 20px;
+                    height: 20px;
+                    object-fit: contain;
+                    transition: all .3s ease;
+                    border-radius: 0;
+
+                    &.sound-on,
+                    &.play {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 64px;
+        height: 64px;
+        background: var(--color-white);
+        border-radius: 50%;
+
+        @include phone {
+            display: none;
+        }
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url(../images/icons/slider.svg) no-repeat center;
+        }
+    }
+
+    .swiper-button-next {
+        right: 20%;
+
+        @include tablet {}
+    }
+
+    .swiper-button-prev {
+        left: 20%;
+
+        @include tablet {}
+    }
+}

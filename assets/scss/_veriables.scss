@@ -7,6 +7,7 @@ $container: 1380;
     --color-black: #000000;
     --color-dark: #1A1A1A;
     --color-white: #ffffff;
+    --color-white-alt: #F7F7F7;
     --color-gray: #757575;
     --color-gray-light: #B2B2B2;
     --color-accent: #B98141;
@@ -20,6 +21,8 @@ $container: 1380;
     --color-shadow: rgba(22, 28, 45, 0.05);
 
     --gr-dark: linear-gradient(0deg, #1A1A1A 0%, #3C3C3C 100%);
+    --gr-accent: linear-gradient(90deg, rgba(162, 119, 64, 0.6) 0%, #EFCC95 67%);
+
 
     /*colors*/
 

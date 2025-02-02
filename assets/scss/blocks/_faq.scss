@@ -1,0 +1,66 @@
+.faq {
+    padding: 60px 0;
+    background: #F4F3ED;
+
+    @include tablet {
+        padding: 30px 0;
+    }
+
+    & h2 {
+        font-size: 30px;
+    }
+
+    &__list {
+        margin-top: 35px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 32px;
+        border-bottom: 1px solid #E6E6E6;
+
+        @include tablet {
+            padding: 25px 20px;
+        }
+
+        &.active {
+            & .icon {
+                rotate: 180deg;
+            }
+
+            & .content {
+                margin-top: 24px;
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+        & .action {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            & h4 {
+                @include fluid-text(20, 18);
+                font-weight: 600;
+                line-height: 1.3;
+            }
+        }
+
+        & .icon {
+            font-size: 0;
+            min-width: 20px;
+            background: url(../images/icons/chevron.svg) no-repeat center;
+        }
+
+        & .content {
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            overflow: hidden;
+        }
+    }
+}

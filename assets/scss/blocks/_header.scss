@@ -69,7 +69,7 @@
 }
 
 .onsale {
-    margin-left: 16px;
+    margin-left: 20px;
     padding-inline: 0 10px;
     position: relative;
     z-index: 2;
@@ -86,7 +86,7 @@
         content: '';
         position: absolute;
         right: 100%;
-        width: 16px;
+        width: 20px;
         height: 100%;
         background: url(../images/icons/subtract.svg) no-repeat left/cover
     }
@@ -99,5 +99,37 @@
 
     @include tablet {
         gap: 15px;
+    }
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &__star {
+        height: 18px;
+        min-width: 90px;
+        background: url(/assets/images/icons/stars-empty.svg) repeat-x left;
+
+        & .stars {
+            display: block;
+            height: 18px;
+            background: url(/assets/images/icons/stars.svg) repeat-x left;
+
+            &.green {
+                background: url(../images/icons/star-green.svg) repeat-x left;
+            }
+        }
+    }
+
+    & p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+
+        & span {
+            color: #00000033;
+        }
     }
 }

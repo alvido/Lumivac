@@ -1,0 +1,5 @@
+<svg class="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+    width="100" height="100" fill="#fff">
+    <rect x="30" y="25" width="15" height="50" fill="#fff" />
+    <rect x="55" y="25" width="15" height="50" fill="#fff" />
+</svg>

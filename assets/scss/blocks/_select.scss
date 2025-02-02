@@ -13,7 +13,7 @@
         min-width: 150px;
         height: 36px;
         padding-inline: 12px 24px;
-        border: 1px solid #8239eb;
+        border: 1px solid var(--color-accent);
         border-radius: 5px;
         cursor: pointer;
 
@@ -24,9 +24,9 @@
             top: 50%;
             right: 16px;
             translate: 0 -50%;
-            width: 24px;
-            height: 24px;
-            background: url(../images/icons/arrow-down-gray.svg) no-repeat center/cover;
+            width: 10px;
+            height: 5px;
+            background: url(../images/icons/select.svg) no-repeat center/cover;
             pointer-events: none;
             transition: rotate 0.3s ease;
         }
@@ -54,12 +54,12 @@
 
             &.same-as-selected {
                 color: #fff;
-                background-color: #8239eb;
+                background-color: var(--color-accent);
             }
 
             @include hover {
                 color: #fff;
-                background-color: #8239eb;
+                background-color: var(--color-accent);
             }
         }
     }
