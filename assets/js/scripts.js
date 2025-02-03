@@ -322,3 +322,24 @@ $(document).ready(function () {
   });
 });
 //faq collapse
+
+//
+function updateBackgrounds() {
+  const isMobile = window.innerWidth <= 768;
+
+  document.querySelectorAll(".product").forEach(section => {
+    const desktopBg = section.getAttribute("data-desktop-bg");
+    const mobileBg = section.getAttribute("data-mobile-bg");
+
+    if (isMobile && mobileBg) {
+      section.style.backgroundImage = `url(${mobileBg})`;
+    } else if (desktopBg) {
+      section.style.backgroundImage = `url(${desktopBg})`;
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", updateBackgrounds);
+window.addEventListener("resize", updateBackgrounds);
+
+//

@@ -2158,11 +2158,23 @@ textarea {
 }
 
 .product {
-  padding: 50px 0;
+  padding: 80px 0;
   color: var(--color-white);
   background: var(--color-black);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1023px) {
+  .product {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .product {
+    background-position: bottom;
+    background-size: contain;
+  }
 }
 .product.full {
   padding-top: 100px;
@@ -2184,9 +2196,11 @@ textarea {
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0 auto;
+  min-height: clamp(25rem, -10.955rem + 56.18vw, 37.5rem);
 }
 @media (max-width: 1023px) {
   .product__img {
+    min-height: auto;
     max-height: 370px;
   }
 }
