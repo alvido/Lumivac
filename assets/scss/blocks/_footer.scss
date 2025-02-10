@@ -215,21 +215,13 @@
         }
 
         & .button {
-            width: 40px;
+            width: 56px;
             font-size: 0;
             padding: 0 15px;
             border-radius: 0 24px 24px 0;
 
-            &::after {
-                content: '';
-                display: block;
-                width: 12px;
-                height: 20px;
-                background: url(../images/icons/arrow-right.svg) no-repeat center;
-            }
-
             @include hover {
-                background: var(--color-gray);
+                background: #F4F3ED;
             }
         }
     }

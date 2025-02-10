@@ -45,7 +45,7 @@ h6 {
 }
 
 h1 {
-    @include fluid-text(48, 46);
+    @include fluid-text(48, 40);
     font-weight: 400;
 
     & span {

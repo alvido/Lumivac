@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var swiper = new Swiper(".swiper-thumb", {
-    loop: true,
+    loop: false,
     freeMode: true,
     watchSlidesProgress: true,
     slidesPerView: 1, // Значение по умолчанию

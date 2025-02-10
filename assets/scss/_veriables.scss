@@ -1,5 +1,5 @@
 //width main container
-$container: 1380;
+$container: 1200;
 
 :root {
 
@@ -38,7 +38,7 @@ $container: 1380;
     --font-family-base: "Graphik", serif;
 
     --container-width: #{$container}px;
-    --container-padding-x: 16px;
+    --container-padding-x: 32px;
 
     --section-padding-y: 20px;
     /*body*/

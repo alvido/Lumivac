@@ -39,6 +39,7 @@
     @include flex-center;
     width: 24px;
     height: 24px;
+    color: #B2B2B2;
 
     @include hover {
         color: var(--color-green);

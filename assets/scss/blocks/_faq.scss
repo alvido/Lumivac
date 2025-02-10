@@ -23,6 +23,10 @@
             padding: 25px 20px;
         }
 
+        @include mobile {
+            padding: 25px 0px;
+        }
+
         &.active {
             & .icon {
                 rotate: 180deg;

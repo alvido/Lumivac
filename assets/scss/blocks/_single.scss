@@ -1,6 +1,6 @@
 .single {
     padding-block: 50px;
-    background: var(--color-white-alt);
+    background: #F4F3ED;
 
     @include tablet {
         padding: 30px 0;
@@ -82,8 +82,8 @@
 
     & .swiper-thumb {
         margin-top: 60px;
-        height: 64px;
         width: 100%;
+        height: auto;
 
         @include tablet {
             margin-top: 12px;
@@ -99,10 +99,15 @@
 
         & .swiper-slide {
             max-width: 64px;
+            height: 64px;
             @include flex-center;
+            border: 2px solid transparent;
+            transition: all .3s ease;
 
             @include phone {
-                max-width: none;
+                max-width: 60px;
+                min-width: 60px;
+                height: 60px;
             }
 
             &-thumb-active {
@@ -154,11 +159,16 @@
             order: 1;
             width: 100%;
         }
-    }
 
-    & .subtitle {
-        font-size: 20px;
-        text-transform: uppercase;
+        @include phone {
+            position: relative;
+
+            & img {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
     }
 
     & h1 {
@@ -321,7 +331,7 @@
             height: 50px;
             padding-inline: 22px;
             @include flex-center;
-            font-size: 10px;
+            font-size: 14px;
             line-height: 1;
             letter-spacing: 0.25px;
             gap: 10px;

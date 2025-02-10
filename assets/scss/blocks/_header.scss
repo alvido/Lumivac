@@ -48,8 +48,9 @@
         gap: clamp(2.5rem, -11.882rem + 22.47vw, 7.5rem);
         color: var(--color-white);
 
-        @include phone {
+        @include mobile {
             gap: 12px;
+            padding: 11px 0;
         }
     }
 
@@ -96,10 +97,6 @@
     display: flex;
     align-items: center;
     gap: 40px;
-
-    @include tablet {
-        gap: 15px;
-    }
 }
 
 .rating {
