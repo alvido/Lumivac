@@ -16,8 +16,8 @@
         content: '';
         display: block;
         width: 20px;
-        height: 2px;
-        background: var(--color-white);
+        height: 1px;
+        background: var(--color-gray-light);
 
         position: absolute;
         left: 50%;
@@ -27,20 +27,20 @@
     }
 
     &::before {
-        top: 13px;
+        top: 14px;
 
     }
 
     &::after {
-        bottom: 13px;
+        bottom: 14px;
 
     }
 
     & span {
         font-size: 0;
         width: 20px;
-        height: 2px;
-        background: var(--color-white);
+        height: 1px;
+        background: var(--color-gray-light);
 
     }
 

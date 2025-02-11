@@ -11,6 +11,12 @@
 
     &__top {
         background: var(--color-accent);
+
+        @include phone {
+            & .container {
+                display: contents;
+            }
+        }
     }
 
     &__promo {
@@ -18,7 +24,7 @@
         @include flex-center;
 
         & .marquee {
-
+            flex: 1;
             white-space: nowrap;
             overflow: hidden;
             position: relative;
