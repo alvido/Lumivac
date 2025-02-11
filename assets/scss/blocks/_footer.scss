@@ -41,7 +41,7 @@
 
         & .col {
             width: 33%;
-            max-width: 500px;
+            max-width: 350px;
 
             @include tablet {
                 width: 100%;
@@ -59,7 +59,7 @@
             }
 
             &:first-child {
-                max-width: 290px;
+                max-width: 210px;
 
                 @include tablet {
                     width: 100%;
@@ -72,7 +72,8 @@
             }
 
             &:last-child {
-                max-width: 390px;
+                max-width: none;
+                width: auto;
 
                 @include tablet {
                     width: 100%;

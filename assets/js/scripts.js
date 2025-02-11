@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       observer: true,
       observeParents: true,
       centeredSlides: true,
-      spaceBetween: 30,
+      spaceBetween: 27,
       loop: true,
       pagination: {
         el: ".explore-pagination",
@@ -260,11 +260,11 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 15,
         },
         1200: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 17,
         },
       },
     });

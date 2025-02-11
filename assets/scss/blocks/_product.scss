@@ -38,19 +38,23 @@
             }
 
             &>p {
-                margin: 25px 0 100px;
+                margin: 25px 0 37px;
                 font-size: 20px;
                 line-height: 1.1;
                 letter-spacing: 0%;
 
                 @include tablet {
-                    margin: 18px 0 48px;
+                    margin: 18px 0 24px;
                 }
             }
         }
 
         & .rating {
-            margin-top: 33px;
+            margin-bottom: 38px;
+
+            @include mobile {
+                margin-bottom: 23px;
+            }
 
             & .rating__star {
                 background-image: url(../images/icons/stars-accent-empty.svg);
@@ -89,7 +93,7 @@
 
     & .row {
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
 
         @include tablet {
             flex-direction: column;
@@ -281,13 +285,13 @@
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 13px;
 
 
     @include tablet {
         margin-top: 35px;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px 25px;
+        gap: 20px 15px;
     }
 
     & li {
