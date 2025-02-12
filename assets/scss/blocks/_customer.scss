@@ -98,12 +98,17 @@
     & .swiper-button-next,
     & .swiper-button-prev {
         top: 60%;
+
+        @include mobile {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     & .swiper-button-prev {
-        left: 0px;
+        left: 2px;
     }
     & .swiper-button-next {
-        right: 0px;
+        right: 2px;
     }
 }

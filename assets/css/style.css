@@ -873,7 +873,7 @@ textarea {
   content: "";
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 0px;
   translate: 0 -50%;
   width: 10px;
   height: 5px;
@@ -957,7 +957,7 @@ textarea {
   -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1019607843);
           box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1019607843);
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .swiper-button-next,
   .swiper-button-prev {
     width: 40px;
@@ -970,13 +970,6 @@ textarea {
   width: 20px;
   height: 20px;
   background: url(../images/icons/slider.svg) no-repeat center/contain;
-}
-@media (max-width: 767px) {
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 .swiper-button-prev::after {
@@ -1060,7 +1053,7 @@ textarea {
 @media (max-width: 767px) {
   .header__inner {
     gap: 12px;
-    padding: 11px 0;
+    padding: 4px 0;
   }
 }
 .header__logo {
@@ -1166,6 +1159,11 @@ textarea {
 }
 .logo img {
   max-width: 156px;
+}
+@media (max-width: 560px) {
+  .logo img {
+    max-width: 100px;
+  }
 }
 
 .nav__list {
@@ -1706,9 +1704,6 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.single .action .select-selected::after {
-  position: static;
-}
 .single .action .button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2237,7 +2232,7 @@ textarea {
 }
 .product.first .product__desc > p {
   margin: 25px 0 37px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.1;
   letter-spacing: 0%;
 }
@@ -2336,7 +2331,6 @@ textarea {
 }
 @media (max-width: 560px) {
   .product__desc {
-    gap: 24px;
     padding: 0 clamp(1rem, -3.5rem + 20vw, 2rem);
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2397,6 +2391,11 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+@media (max-width: 560px) {
+  .designed__list li {
+    gap: 10px;
+  }
 }
 .designed__list li h3 {
   line-height: 1;
@@ -2639,11 +2638,17 @@ textarea {
 .customer .swiper-button-next, .customer .swiper-button-prev {
   top: 60%;
 }
+@media (max-width: 767px) {
+  .customer .swiper-button-next, .customer .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+  }
+}
 .customer .swiper-button-prev {
-  left: 0px;
+  left: 2px;
 }
 .customer .swiper-button-next {
-  right: 0px;
+  right: 2px;
 }
 
 .footer {

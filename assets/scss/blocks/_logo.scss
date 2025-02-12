@@ -6,5 +6,9 @@
 
     & img {
         max-width: 156px;
+
+        @include phone {
+            max-width: 100px;
+        }
     }
 }
