@@ -49,6 +49,10 @@
             }
         }
 
+        & .product__img {
+            max-height: 450px;
+        }
+
         & .rating {
             margin-bottom: 38px;
 
@@ -114,15 +118,16 @@
                 padding: 0;
 
                 @include phone {
-                    padding: 0 clamp(1rem, -3.5rem + 20vw, 2rem);
+                   // padding: 0 clamp(1rem, -3.5rem + 20vw, 2rem);
                 }
             }
         }
     }
 
     &__desc {
-        padding-left: 32px;
+       // padding-left: 32px;
         max-width: 450px;
+        max-width: 530px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -141,6 +146,10 @@
             & .rating {
                 align-self: center;
             }
+        }
+
+        &>p {
+            max-width: 430px;
         }
     }
 

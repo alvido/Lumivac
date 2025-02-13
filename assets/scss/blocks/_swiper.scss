@@ -35,6 +35,11 @@
         width: 20px;
         height: 20px;
         background: url(../images/icons/slider.svg) no-repeat center/contain;
+
+        @include phone {
+            width: 16px;
+            height: 16px;
+        }
     }
 }
 

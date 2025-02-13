@@ -45,7 +45,7 @@ h6 {
 }
 
 h1 {
-    @include fluid-text(48, 40);
+    @include fluid-text(48, 36);
     font-weight: 400;
 
     & span {
@@ -54,7 +54,7 @@ h1 {
 }
 
 h2 {
-    @include fluid-text(48, 34);
+    @include fluid-text(46, 34);
     font-weight: 500;
     line-height: 1.2;
 }
