@@ -45,7 +45,7 @@
 
     &.first {
         padding: 60px 0 30px;
-        height: calc(100vh - 100px);
+        min-height: calc(100vh - 100px);
 
         & .row {
             @include phone {

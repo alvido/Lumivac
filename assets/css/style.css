@@ -2252,7 +2252,7 @@ textarea {
 }
 .product.first {
   padding: 60px 0 30px;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
 @media (max-width: 560px) {
   .product.first .row {
