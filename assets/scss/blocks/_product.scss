@@ -1,4 +1,6 @@
 .product {
+    min-height: 600px;
+    @include flex-center;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -33,6 +35,7 @@
 
     @include tablet {
         padding: 60px 0 0 0;
+        min-height: auto;
     }
 
     @include mobile {
@@ -42,6 +45,7 @@
 
     &.first {
         padding: 60px 0 30px;
+        height: calc(100vh - 100px);
 
         & .row {
             @include phone {

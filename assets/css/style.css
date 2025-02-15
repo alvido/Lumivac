@@ -2200,6 +2200,16 @@ textarea {
 }
 
 .product {
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -2231,6 +2241,7 @@ textarea {
 @media (max-width: 1023px) {
   .product {
     padding: 60px 0 0 0;
+    min-height: auto;
   }
 }
 @media (max-width: 767px) {
@@ -2241,6 +2252,7 @@ textarea {
 }
 .product.first {
   padding: 60px 0 30px;
+  height: calc(100vh - 100px);
 }
 @media (max-width: 560px) {
   .product.first .row {
