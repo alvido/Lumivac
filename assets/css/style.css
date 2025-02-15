@@ -1456,6 +1456,7 @@ textarea {
   background: url(../images/icons/arrow-slider.svg) no-repeat center;
 }
 .single__top {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1477,15 +1478,14 @@ textarea {
     width: 100%;
   }
 }
+.single__top img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 @media (max-width: 560px) {
-  .single__top {
-    position: relative;
-  }
   .single__top img {
     width: 70px;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 }
 .single h1 {

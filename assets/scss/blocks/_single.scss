@@ -149,6 +149,7 @@
     }
 
     &__top {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -161,16 +162,16 @@
             width: 100%;
         }
 
-        @include phone {
-            position: relative;
+        & img {
+            position: absolute;
+            right: 0;
+            top: 0;
 
-            & img {
+            @include phone {
                 width: 70px;
-                position: absolute;
-                right: 0;
-                top: 0;
             }
         }
+
     }
 
     & h1 {
@@ -357,8 +358,7 @@
             align-items: center;
             justify-content: space-between;
 
-            &::after {
-            }
+            &::after {}
         }
 
         & .button {
